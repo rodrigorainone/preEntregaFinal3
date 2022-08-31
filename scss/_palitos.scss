@@ -1,0 +1,23 @@
+.palitos {                                                                                  /* empieza decoracion de textos y titulos palitos*/
+   display: inline-block;
+  position: relative;  
+  &::after ,&::before{
+     content: " ";
+     position: absolute;
+     @include tamanio (120px,5px);     
+     background-color: black;
+     top: 0.7em;
+  }  
+  &::after{
+     left:-140px;       
+     background-image: url(../img/palitoleftpink.jpg);
+     background-size:120px 5px;                            
+  }
+  &::before {
+     right:-140px;
+     background-image: url(../img/palitorightpink.jpg);
+     background-size:120px 5px;
+ }
+}
+
+/*termina decoracion palitos */

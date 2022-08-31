@@ -1,0 +1,77 @@
+/*   pagina  contacto */ 
+
+.formContenedor {
+    background-color:$colorCeles;
+    text-align: center;    
+    padding-top: 15px;   
+    @include tamanio (500px,550px); 
+   }
+   
+   .contactoTitulo,.preguntasTitulo , .nosotrosTitulo , .comoComprarTitulo{
+    margin-bottom: 15px;
+    margin-top: 30px;
+    text-align: center;
+    z-index: -1;
+   }
+
+.contactoNombre , .contactoCorreo {
+   padding-left: 15px;
+   display: flex;
+   input {
+      width: 300px;
+   }  
+}
+
+.contactoComentarios{   
+    
+   label{
+      padding-left: 15px; 
+      text-align: left;  
+      p{
+         font-size: 17px;
+         padding-left: 15px;
+         padding-bottom: 15px;
+      }        
+   }
+
+   textarea {
+      @include tamanio (460px,270px);      
+      resize: none;     
+   }
+}
+
+.contactoNombre {
+   padding-top: 15px;
+}
+
+.contactoContenedor {
+   padding-top: 30px;
+   text-align: center;      
+   display: flex;
+   justify-content: center;
+   gap:50px;
+   flex-wrap: wrap;   
+   margin-bottom: 30px; 
+   p{
+      font-size: 30px; 
+   }
+}
+
+.contenedorDatos{
+   background-image: url(../img/contacto1.jpg);
+   @include tamanio (500px,550px);   
+   display: flex;
+   justify-content:center;
+   align-items: flex-end;
+   i{
+      padding-bottom: 50px;
+      font-size: 30px;
+      &:hover {
+         color:$colorRosa;
+      }
+   }  
+   a{
+      color:black;
+     text-decoration: none;
+   } 
+}    

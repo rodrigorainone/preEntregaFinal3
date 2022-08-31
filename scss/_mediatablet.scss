@@ -1,0 +1,36 @@
+@media (min-width:600px) and (max-width: 1200px) { 
+
+    .categoriasFotos{        
+        grid-template: 
+        "titu titu"
+        "cat1 cat2" 
+        "cat3 cat4" 
+        "cat5 cat6" ;
+        gap:15px;
+        padding-left:15px ;
+        padding-right: 15px;
+        
+    }
+
+    .atencion {
+        display:none;
+    }
+
+    .footerContenedorPhoneInfo {
+        gap:15px;
+         padding-left: 30px;
+         padding-right: 30px;
+    }
+
+    .copyright {
+        padding-top: 15px;
+    }
+
+    /*         catalogo tablet               */
+
+    .catalogoContenedorInfo,.catalogoContenedorInfo{
+        img,iframe {
+            @include tamanio (500px,500px);             
+        }        
+    }    
+}

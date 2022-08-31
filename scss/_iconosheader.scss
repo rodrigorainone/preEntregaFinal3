@@ -1,0 +1,13 @@
+/*      iconos header     */
+
+.iconosHeader{
+    a{
+        text-decoration: none;
+        color:black; 
+    }    
+    & :hover {
+        color: #4ab7bb;
+    }  
+}
+
+

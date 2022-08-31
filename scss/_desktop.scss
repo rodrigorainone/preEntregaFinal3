@@ -1,0 +1,273 @@
+/*estructura desktop */ 
+
+
+.gridConteiner {
+  display: grid;
+  grid-template: 
+  "header" 
+  "main" 
+  "footer " ;
+}   
+
+main {
+  grid-area: main; 
+}  
+
+footer {
+  grid-area: footer;
+  margin-top: 40px;
+  background-color:rgb(32, 30, 30);
+  text-align: center;       
+  color:white
+}
+                          /*empieza el header desktop */
+#conteinerHeader {
+  grid-area: header;
+  display: grid;
+  grid-template: 
+  "promo" 
+  "contenerInfoHeader" ;
+}
+
+.promo {
+  grid-area: promo;
+  background-color: $colorCeles;
+  height: 50px;
+  text-align: center;
+  padding-top: (6px+6);
+  font-weight: bold;
+}
+
+.contenerInfoHeader {
+  grid-area:contenerInfoHeader ;
+  background-image: url(../img/fondo4.jpg);
+  height: 200px;
+  display:grid;
+  grid-template: 
+  "iconosHeader logoHeader" 150px
+  "nav nav" 50px;
+}
+
+.iconosHeader {
+  grid-area:iconosHeader ;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.logoHeader{
+  grid-area:logoHeader ;
+  padding-right: 120px;
+  padding-top: 10px;
+}
+
+/* menu destktop*/
+
+nav {                                          
+  grid-area: nav;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.ulPrin {
+  display: flex;
+  justify-content: center;    
+  gap:5px;
+  list-style: none;    
+}
+
+.ulPrin{
+  li {
+    padding: 15px;
+    &:hover{
+      background-color: $colorCeles;
+      transform: scale(1.1);
+      transition: all 0.3s;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,0.5);
+      border-radius: 1px;
+    }
+    a{
+      color:black;
+      text-decoration: none;
+    }
+  }
+}   
+   
+.logoHeaderMobile ,#menuNavPhone,.menuNavPhoneLabel{
+  display: none;
+}
+    
+/*             main    index   desktop                     */
+    
+.mainIndex {            
+  display: grid;
+  grid-template: 
+  "banner" auto
+  "categoriasFotos" auto
+  "atencionEnvios" auto;
+}
+     
+/*          banner       index        */
+
+.banner{
+      grid-area: banner;      
+}
+     
+       /*   categoria index   */
+      
+.categoriasFotos{
+  text-align: center;
+  margin-top: 30px;
+  grid-area: categoriasFotos;
+  display:grid;
+  grid-template: 
+  "titu titu titu" auto
+  "cat1 cat2 cat3"  auto
+  "cat4 cat5 cat6" auto ;        
+  gap:20px;
+  padding-left:20px ;
+  padding-right: 20px;
+}
+
+.titu {
+  grid-area: titu;
+}
+
+.cat1{
+  grid-area: cat1;
+}
+
+.cat2{
+  grid-area: cat2;
+}
+      
+.cat3{
+  grid-area: cat3;
+}
+
+.cat4{
+  grid-area: cat4;
+}
+
+.cat5{
+  grid-area: cat5;
+}
+
+.cat6{
+  grid-area: cat6;
+}
+    
+.cat1,.cat2,.cat3,.cat4,.cat5,.cat6{
+  img {
+    width: 100%;
+  }        
+}
+
+       /*        Atencion envios catalogo index  */
+
+.atencionEnvios{
+  grid-area:atencionEnvios ;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 60px;
+  margin-bottom: 30px;   
+}
+
+.atencionEnvios{
+  img {        
+    width: 100%;
+  }
+}
+
+/*        footer            */
+
+    
+#mostrarMenuAyudarte  ,#mostrarMenuNosotros ,#mostrarMenuInformar,#mostrarMenuSeguinos,#mostrarMenuMedios,.mostrarMenuAyudarteMod ,.mostrarMenuNosotrosMod,.mostrarMenuInformarMod,.mostrarMenuSeguinosMod,.mostrarMenuMediosMod{
+  display:none;
+}   
+         
+.colorPhone {
+  color: $colorRosa;
+  font-weight: bold;        
+}
+
+.footerContenedorPhoneInfo {
+  display: grid;    
+  grid-template: 
+  "ayudarFot nosotrosFot informarFot seguinosFot  mediosFot" auto
+  "copyright copyright copyright copyright copyright " auto;     
+  padding-left: 180px;
+  padding-right: 180px;     
+}
+
+.ayudarFot{
+  grid-area: ayudarFot;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.nosotrosFot {
+  grid-area: nosotrosFot;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.informarFot{
+  grid-area:informarFot ;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.seguinosFot {
+  grid-area:seguinosFot;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.mediosFot {
+  grid-area: mediosFot;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.copyright {
+  grid-area: copyright;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 14px;    
+}
+
+.MediosUl,.SeguinosUl,.InformarUl,.NosotrosUl,.ayudarteUl{
+  ul {
+    list-style: none;
+    li {
+      padding-top: 15px;
+      p {
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color:$colorCeles;
+          }
+        }
+      }
+    }
+  }    
+}
+
+  /*   iconos header  */
+.fa-facebook-f ,.fa-instagram,.fa-whatsapp,.fa-envelope{
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+/*titulos */ 
+
+.titulosPages{
+h1{
+  font-weight: bolder;
+  font-size:35px; 
+  }
+}

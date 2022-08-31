@@ -1,0 +1,341 @@
+@media (min-width:1px) and (max-width: 599px) {
+  
+
+    /*         empieza header                    */
+    #conteinerHeader {
+        grid-area: header;
+        display: grid ;
+        grid-template: 
+            "promo" 40px   
+            "contenerInfoHeader" 70px;                 
+    }
+
+    .promo {
+        grid-area:promo;
+        background-color: $colorCeles;
+        text-align: center;
+        position: fixed;
+        left:0;
+        top:0;
+        @include tamanio (100%,40px);        
+        font-weight: bold;
+        z-index: 5;
+        font-size: 13px;
+    }
+
+    .contenerInfoHeader {
+        grid-area:contenerInfoHeader;
+        background-image: url(../img/fondo4.jpg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include tamanio (100%,70px);      
+        position:fixed;
+        left: 0px;
+        top: 40px;            
+        z-index: 5;
+    }
+
+    .logoHeader {
+        display:none;
+    }
+                        
+    /* menu mobile */
+    
+
+    nav {                                        
+        background-color: transparent;    
+    }
+
+    .logoHeaderMobile ,#menuNavPhone,.menuNavPhoneLabel{
+        display: block;
+    }
+    
+    .ulPrin{
+        background-color: $colorCeles;              
+        list-style: none;                    
+        width: 100%; 
+        position:fixed;
+        left: -800px;    
+        top: 0;
+        transition: all 1s;  
+        padding-top:120px;
+        padding-left: 10px;
+        display:block;
+       li {
+            padding-bottom: 15px;
+            border-top: 1px solid silver;
+            padding-top: 10px;
+            font-weight: bolder;
+            z-index: 150;
+            &:hover {
+                transform:none;
+                transition:none;
+                box-shadow:none;
+                border-radius:none;
+                a {
+                    color:white;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 20px;   
+            }
+        }        
+    }
+   
+    #menuNavPhone {        
+        display: none;
+        &:checked ~ .ulPrin{
+            left:0px;
+        }
+    }
+    
+    .menuNavPhoneLabel {
+        position: relative;
+        z-index: 150;
+        
+    }    
+   
+    .fa-bars ,.fa-envelope,.fa-instagram,.fa-whatsapp,.fa-facebook-f,.logoHeaderMobile{
+        font-size: 15px;
+    }
+    
+    .logoHeaderMobile {
+        a{
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 25px;            
+            font-size: 17px;
+        }        
+    }    
+
+    .fa-bars{
+        &:hover {
+            color:white;
+
+        }        
+    }
+
+    /* empieza el main del index */
+
+    .mainIndex {
+        gap: 5px;
+    }
+
+    .banner {
+       grid-area: banner;
+        margin-top: 10px;
+        z-index: 1;            
+    }
+
+    .categoriasFotos {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .titu {
+        padding-bottom: 5px;
+        z-index: -1;
+    }
+
+    .atencionEnvios {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 15px;
+    }
+       
+    .envio,.atencion{
+        display: none;
+    }
+
+     /* termina el main*/
+
+    /*     footer phone */
+
+    
+    .footerContenedorPhoneInfo{
+        text-align: center;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;        
+    }
+
+    .footerContenedorPhoneInfo{
+        p {
+            padding-bottom: 5px;
+        }        
+    }
+
+    .colorPhone {
+        color: $colorRosa;
+        font-weight: bold;
+    
+    }
+
+    #mostrarMenuAyudarte, #mostrarMenuNosotros ,#mostrarMenuInformar ,#mostrarMenuSeguinos,#mostrarMenuMedios{
+        display:none;
+    }
+   
+    .footerContenedorPhoneInfo{
+        label {
+            &:hover {
+                cursor:pointer;
+            }
+        }        
+    }
+
+    .ayudarteUl,.NosotrosUl,.InformarUl,.SeguinosUl, .MediosUl{
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;      
+            padding-left: 0;
+            gap: 5px;
+            li {
+                color:white;    
+                text-align: left;
+                p{
+                    font-size: 15px;
+                    font-weight:lighter;
+                    margin-bottom: 10px;
+                }
+                }
+            }
+        a{
+            color:white;
+            text-decoration: none;
+            &:hover {
+                color:$colorCeles;
+                text-decoration: none;
+            }
+        }   
+    }
+    
+
+    .ayudarFot,.nosotrosFot,.informarFot,.seguinosFot,.mediosFot{
+        text-align: left;   
+    }  
+    
+    .ayudarteUl ,.NosotrosUl ,.InformarUl ,.SeguinosUl ,.MediosUl {
+        display: none;
+    }
+
+    #mostrarMenuAyudarte:checked ~ .ayudarteUl ,#mostrarMenuNosotros:checked ~ .NosotrosUl ,#mostrarMenuInformar:checked ~ .InformarUl ,#mostrarMenuSeguinos:checked ~ .SeguinosUl,#mostrarMenuMedios:checked ~ .MediosUl {
+        display: block;
+    }    
+    
+    .copyright {
+        margin-top: 30px;
+        font-size: 13px;
+        text-align: center;
+        
+    }
+
+    .pDesk{
+        display: none;
+    }
+
+    .iconosHeader {       
+        padding-left: 0px;
+        padding-top: 2px;    
+    }
+
+   
+    .mostrarMenuMediosMod  ,.mostrarMenuSeguinosMod,.mostrarMenuInformarMod ,.mostrarMenuNosotrosMod,.mostrarMenuAyudarteMod {
+        display:block;
+    }
+   
+    
+   /* paginas  catalogos */
+
+   .catalogoContenedorInfo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+   .catalogoContenedorInfo,.catalogoContenedorInfo{
+        img,iframe{
+            @include tamanio (100%,500px);              
+        }
+    }
+
+    .imgIndice {
+        display:none;
+    }
+
+    /*decoracion palitos*/
+
+    .palitos {                                                                                  /* empieza decoracion de textos y titulos palitos*/
+        display: inline-block;
+        position: relative;  
+       
+       &::after ,&::before{
+          content: " ";
+          position: absolute;
+          @include tamanio (60px,5px);          
+          background-color: black;
+          top: 0.7em;     
+       }
+       
+       &::after{
+          left:-70px;       
+          background-image: url(../img/palitoleftpink.jpg);
+          background-size:60px 5px;                                 
+       }
+
+       &::before {
+          right:-70px;
+          background-image: url(../img/palitorightpink.jpg);
+          background-size:60px 5px;
+       }  
+    }
+
+    .titulosPages{
+        h1{          
+          font-size:20px; 
+        }      
+    }
+      
+    /*   pagina contacto  */
+
+    .contenedorDatos{
+     background-image: url(../img/contacto1phone.jpg);
+     @include tamanio (300px,300px);        
+    }
+
+    .contenedorDatos{
+        i {
+            padding-bottom: 5px;
+            font-size: 25px; 
+    }    
+    }
+
+    .formContenedor{
+        @include tamanio (300px,450px);        
+    }
+
+    .contactoNombre, .contactoCorreo{
+        input {
+        width: 170px;
+        }
+    }
+
+    .contactoComentarios{
+        textarea {
+            @include tamanio (250px,150px);           
+        }        
+    }
+    
+}
